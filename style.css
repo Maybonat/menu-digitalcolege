@@ -1,0 +1,120 @@
+/* Estilos básicos para o menu */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#site-header {
+    background-color: #000000;
+    color: white;
+    display: flex;
+    /* Usa Flexbox para layout do header */
+    align-items: center;
+    /* Alinha os itens verticalmente ao centro */
+    justify-content: space-between;
+    /* Distribui o espaço entre a logo e o menu */
+    padding: 10px 20px;
+    /* Ajusta o espaçamento do header */
+}
+
+.logo img {
+    width: 150px;
+    /* Ajuste o tamanho da logo conforme necessário */
+}
+
+.navigation {
+    flex-grow: 1;
+    /* Permite que a navegação ocupe o espaço restante */
+    text-align: center;
+    /* Centraliza o texto do menu */
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    /* Usa Flexbox para alinhamento horizontal dos itens do menu */
+    justify-content: center;
+    /* Centraliza os itens do menu horizontalmente */
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-link {
+    display: block;
+    padding: 15px 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #000000;
+
+}
+nav a:hover {
+    color: rgb(255, 0, 106);
+}
+.menu-link:hover {
+    background-color: #000000;
+}
+
+/* Estilos para o dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #000000;
+}
+
+.dropdown-item {
+    position: relative;
+}
+
+.dropdown-item:hover .submenu {
+    display: block;
+}
+
+.dropdown-menu .dropdown-link {
+    padding: 10px 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu .dropdown-link:hover {
+    background-color: #000000;
+}
+
+/* Estilos para o submenu */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #000000;
+}
+
+.submenu-link {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu-link:hover {
+    background-color: #000000;
+}
+
+/* Mostrar o dropdown quando passar o mouse sobre o item pai */
+.menu-item:hover .dropdown-menu {
+    display: block;
+}
